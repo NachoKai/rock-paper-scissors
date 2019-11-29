@@ -2,105 +2,83 @@
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.1s ease;
+  box-sizing: border-box;
   transition: all 0.1s ease;
 }
-
 body {
   text-align: center;
 }
-
 h1 {
   font-size: 3em;
 }
-
 h3 {
   text-decoration: underline;
   margin-top: 2em;
 }
-
 p {
   font-size: 20px;
 }
-
 .container {
   min-width: 100vw;
   min-height: calc(100vh - 25px);
 }
-
 .gamebox {
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   text-align: center;
   border-radius: 5px;
 }
-
 .title {
   font-weight: bold;
   padding-bottom: 20px;
 }
-
 .fa {
   font-size: 6em;
   cursor: pointer;
   margin: 0.25em;
 }
-
 #rock {
   cursor: pointer;
 }
-
 #paper {
   cursor: pointer;
 }
-
 #scissors {
   cursor: pointer;
 }
-
 #reset {
   padding: 5px;
   font-weight: bold;
   border-radius: 5px;
   outline: 0;
 }
-
 #winner {
   font-weight: bold;
 }
-
 tbody {
   border-radius: 5px;
 }
-
 .score {
   font-size: 20px;
 }
-
 .computeranswer {
   margin: 2em;
 }
-
 table {
   border: 3px solid;
   margin: auto;
 }
-
 th {
   font-size: 2em;
   border-bottom: 2px solid black;
 }
-
 td {
   font-size: 1.5em;
 }
-
 td,
 td {
-  padding: .50em;
+  padding: 0.5em;
 }
-
 button {
   border: 2px solid #000;
   background: #fff;
@@ -109,27 +87,19 @@ button {
   margin: 1em;
   cursor: pointer;
 }
-
 button:hover {
   background: #000;
   color: #fff;
   border: 2px solid #000;
 }
-
 footer {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
   text-align: center;
 }
-
 footer a {
   color: #000;
 }
-
 .gameVictory {
   padding: 20px;
   background-color: green;
@@ -137,7 +107,6 @@ footer a {
   min-height: calc(100vh - 25px);
   text-align: center;
 }
-
 .gameOver {
   padding: 20px;
   background-color: red;
@@ -145,7 +114,6 @@ footer a {
   min-height: calc(100vh - 25px);
   text-align: center;
 }
-
 @media (prefers-color-scheme: dark) {
   body,
   .gamebox,
@@ -167,7 +135,6 @@ footer a {
     border-bottom: 3px solid #fff;
   }
 }
-
 @media (prefers-color-scheme: light) {
   body,
   .gamebox,
@@ -189,4 +156,3 @@ footer a {
     border-bottom: 3px solid #000;
   }
 }
-/*# sourceMappingURL=main.css.map */
