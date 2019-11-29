@@ -24,8 +24,8 @@ p {
 }
 
 .container {
+    min-width: 100vw;
     min-height: calc(100vh - 25px);
-    border-radius: 5px;
 }
 
 .gamebox {
@@ -81,7 +81,7 @@ tbody {
 }
 
 table {
-    border: 3px solid #000;
+    border: 3px solid;
     margin: auto;
 }
 
@@ -115,8 +115,6 @@ button:hover {
 }
 
 footer {
-    border-top: solid 1px #000;
-    height: 18px;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
@@ -141,4 +139,57 @@ footer {
     min-height: calc(100vh - 25px);
     text-align: center;
 
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body,
+    .gamebox,
+    .container,
+    footer a {
+        background: #000;
+        color: #fff;
+    }
+
+    footer {
+        background: #000;
+        color: #fff;
+        border-top: solid 1px #fff;
+    }
+
+    table {
+        border: 3px solid #fff;
+        margin: auto;
+
+    }
+
+    .score {
+        border-bottom: 3px solid #fff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    body,
+    .gamebox,
+    .container,
+    footer a {
+        background: #fff;
+        color: #000;
+    }
+
+    footer {
+        background: #fff;
+        color: #000;
+        border-top: solid 1px #000;
+    }
+
+    table {
+        border: 3px solid #000;
+        margin: auto;
+    }
+
+    .score {
+        border-bottom: 3px solid #000;
+    }
 }
