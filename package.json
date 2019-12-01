@@ -1,0 +1,24 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissors Game",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^3.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "cypress",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NachoKai/rock-paper-scissors.git"
+  },
+  "author": "Nacho Caiafa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NachoKai/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/NachoKai/rock-paper-scissors#readme"
+}
