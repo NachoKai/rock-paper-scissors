@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Rock Paper Scissors Game",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "cypress": "^3.7.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "cypress",
     "cy:run": "cypress run"
