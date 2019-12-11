@@ -5,4 +5,5 @@
 •CSS (Scss, Grid, Flexbox, Responsive Design)  
 •Javascript  
 •Google Fonts  
-•Testing: Cypress
+•SweetAlert2  
+•Testing: Cypress  
