@@ -84,8 +84,8 @@ function gameVictory() {
     document.getElementById('playerScore').value = playerScore;
 
     if (playerScore === 5) {
+        indicarVictoria()
         document.querySelector("#gamebox").className = "gameVictory"
-        document.getElementById('winner').innerText = "Congratulations, you won the game! 👍";
         document.getElementById('rock').onclick = '';
         document.getElementById('paper').onclick = '';
         document.getElementById('scissors').onclick = '';
@@ -96,11 +96,39 @@ function gameOver() {
     document.getElementById('compScore').value = compScore;
 
     if (compScore === 5) {
+        indicarFracaso()
         document.querySelector("#gamebox").className = "gameOver"
-        document.getElementById('winner').innerText = "You lost the game! 👎";
         document.getElementById('rock').onclick = '';
         document.getElementById('paper').onclick = '';
         document.getElementById('scissors').onclick = '';
     }
 
+}
+
+function indicarFracaso() {
+    Swal.fire({
+        icon: 'error',
+        title: "Oops!",
+        html: `
+        <p class="h4">You lost the game 👎</p>
+        <span><input type="button" value="Reset" class="btn btn-outline-danger"
+                    onclick="window.location.reload(false)"></span>`,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
+    })
+}
+
+function indicarVictoria() {
+    Swal.fire({
+        icon: 'success',
+        title: "Congratulations!",
+        html: `
+        <p class="h4">You won the game 👍</p>
+        <span><input type="button" value="Reset" class="btn btn-outline-danger"
+                    onclick="window.location.reload(false)"></span>`,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
+    })
 }
