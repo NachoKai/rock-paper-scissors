@@ -13,13 +13,14 @@
   outline: 0;
 }
 body {
+  background: #000 !important;
+  color: #fff !important;
   text-align: center;
 }
 h1 {
   font-size: 3em;
 }
 h3 {
-  text-decoration: underline;
   margin-top: 2em;
 }
 p {
@@ -68,6 +69,7 @@ p {
   font-weight: bold;
 }
 .score {
+  border-bottom: 3px solid #fff;
   margin: 4px;
   margin: 4px;
   font-size: 1.2em;
@@ -76,7 +78,7 @@ p {
   margin: 2em;
 }
 table {
-  border: 3px solid;
+  border: 3px solid #fff;
   margin: auto;
 }
 th {
@@ -104,12 +106,16 @@ button:hover {
   border: 2px solid #fff;
 }
 footer {
+  background: #000;
+  color: #fff;
+  border-top: solid 1px #fff;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
 }
 footer a {
-  color: #000;
+  background: #000;
+  color: #fff;
 }
 .gameVictory {
   padding: 20px;
@@ -125,45 +131,11 @@ footer a {
   min-height: calc(100vh - 25px);
   text-align: center;
 }
-@media (prefers-color-scheme: dark) {
-  body,
-  .gamebox,
-  .container,
-  footer a {
-    background: #000;
-    color: #fff;
-  }
-  footer {
-    background: #000;
-    color: #fff;
-    border-top: solid 1px #fff;
-  }
-  table {
-    border: 3px solid #fff;
-    margin: auto;
-  }
-  .score {
-    border-bottom: 3px solid #fff;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body,
-  .gamebox,
-  .container,
-  footer a {
-    background: #fff;
-    color: #000;
-  }
-  footer {
-    background: #fff;
-    color: #000;
-    border-top: solid 1px #000;
-  }
-  table {
-    border: 3px solid #000;
-    margin: auto;
-  }
-  .score {
-    border-bottom: 3px solid #000;
-  }
+.title {
+  padding: 5px;
+  margin: 5px;
+  max-width: 100%;
+  max-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
