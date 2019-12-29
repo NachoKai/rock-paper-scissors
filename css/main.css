@@ -170,4 +170,31 @@ footer a {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .fa {
+    max-width: 80px;
+    margin: 0em;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .fa {
+    max-width: 90px;
+    margin: 0em;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .fa {
+    max-width: 150px;
+    margin: 0em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .fa {
+    max-width: 150px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
