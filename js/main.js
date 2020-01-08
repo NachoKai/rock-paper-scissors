@@ -1,22 +1,14 @@
-let playerScore = 0;
-let compScore = 0;
+let playerScore = 0,
+    compScore = 0
 
-document.getElementById('rock').onclick = playRock;
-document.getElementById('paper').onclick = playPaper;
-document.getElementById('scissors').onclick = playScissors;
-document.getElementById('reset').onclick = resetGame;
+document.getElementById('rock').onclick = playRock
+document.getElementById('paper').onclick = playPaper
+document.getElementById('scissors').onclick = playScissors
+document.getElementById('reset').onclick = resetGame
 
-function playRock() {
-    play('✊');
-}
-
-function playPaper() {
-    play('🖐');
-}
-
-function playScissors() {
-    play('✌');
-}
+playRock = () => play('✊')
+playPaper = () => play('🖐')
+playScissors = () => play('✌')
 
 function getCompChoice() {
     let choices = ['✊', '🖐', '✌'];
