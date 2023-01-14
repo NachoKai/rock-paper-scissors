@@ -1,9 +1,9 @@
-let playerScore = 0,
-  compScore = 0;
+let playerScore = 0;
+let compScore = 0;
 
-playRock = () => play("✊");
-playPaper = () => play("🖐");
-playScissors = () => play("✌");
+const playRock = () => play("✊");
+const playPaper = () => play("🖐");
+const playScissors = () => play("✌");
 
 document.getElementById("rock").onclick = playRock;
 document.getElementById("paper").onclick = playPaper;
@@ -11,16 +11,13 @@ document.getElementById("scissors").onclick = playScissors;
 document.getElementById("reset").onclick = resetGame;
 
 function getCompChoice() {
-  let choices = ["✊", "🖐", "✌"];
-  let compChooses = choices[Math.floor(Math.random() * choices.length)];
-  return compChooses;
+  const choices = ["✊", "🖐", "✌"];
+  return choices[Math.floor(Math.random() * choices.length)];
 }
 
 function play(userPlay) {
-  let compChoice = getCompChoice();
-  document.getElementById(
-    "result"
-  ).innerHTML = `YOU: 🧠${userPlay}   ${compChoice}💻 :COMPUTER`;
+  const compChoice = getCompChoice();
+  document.getElementById("result").innerHTML = `YOU: 🧠${userPlay}   ${compChoice}💻 :COMPUTER`;
 
   if (userPlay == "✊") {
     if (compChoice == "✊") {
@@ -76,25 +73,27 @@ function resetGame() {
 function gameVictory() {
   document.getElementById("playerScore").value = playerScore;
 
-  if (playerScore === 5) {
-    indicarVictoria();
-    document.querySelector("#gamebox").className = "gameVictory";
-    document.getElementById("rock").onclick = "";
-    document.getElementById("paper").onclick = "";
-    document.getElementById("scissors").onclick = "";
+  if (playerScore !== 5) {
+    return;
   }
+  indicarVictoria();
+  document.querySelector("#gamebox").className = "gameVictory";
+  document.getElementById("rock").onclick = "";
+  document.getElementById("paper").onclick = "";
+  document.getElementById("scissors").onclick = "";
 }
 
 function gameOver() {
   document.getElementById("compScore").value = compScore;
 
-  if (compScore === 5) {
-    indicarFracaso();
-    document.querySelector("#gamebox").className = "gameOver";
-    document.getElementById("rock").onclick = "";
-    document.getElementById("paper").onclick = "";
-    document.getElementById("scissors").onclick = "";
+  if (compScore !== 5) {
+    return;
   }
+  indicarFracaso();
+  document.querySelector("#gamebox").className = "gameOver";
+  document.getElementById("rock").onclick = "";
+  document.getElementById("paper").onclick = "";
+  document.getElementById("scissors").onclick = "";
 }
 
 function indicarFracaso() {
@@ -107,7 +106,7 @@ function indicarFracaso() {
                     onclick="window.location.reload(false)"></span>`,
     allowOutsideClick: false,
     allowEscapeKey: false,
-    showConfirmButton: false
+    showConfirmButton: false,
   });
 }
 
@@ -121,6 +120,6 @@ function indicarVictoria() {
                     onclick="window.location.reload(false)"></span>`,
     allowOutsideClick: false,
     allowEscapeKey: false,
-    showConfirmButton: false
+    showConfirmButton: false,
   });
 }
